@@ -1,0 +1,7 @@
+{
+    "elm.formatCommand": ".\\node_modules\\.bin\\elm-format.cmd",
+    "[elm]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnSaveTimeout": 1500
+    }
+}
