@@ -1,0 +1,32 @@
+{
+  "name": "elm-spa-version",
+  "version": "0.0.1",
+  "description": "A version of the RealWorld Elm Single Page App example with a variation of module decomposition",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "live": "elm-live.cmd src/Main.elm --pushstate --open --hot --dir=./public -- --output=./public/elm.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenards/elm-spa-version.git"
+  },
+  "keywords": [
+    "elm",
+    "spa"
+  ],
+  "author": "Andrew J Lenards",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lenards/elm-spa-version/issues"
+  },
+  "homepage": "https://github.com/lenards/elm-spa-version#readme",
+  "devDependencies": {
+    "elm": "^0.19.0-no-deps",
+    "elm-format": "^0.8.1",
+    "elm-live": "^3.4.1"
+  }
+}
