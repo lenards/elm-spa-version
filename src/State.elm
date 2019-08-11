@@ -1,7 +1,7 @@
 module State exposing (init, subscriptions, update)
 
 import Browser.Navigation as Nav
-import Types exposing (Flags, Model, Msg(..))
+import Types exposing (Flags, Model, Msg(..), initSession)
 import Url exposing (Url)
 
 
@@ -14,8 +14,8 @@ init flags url navKey =
     let
         initialModel =
             { base = url
-            , nav = navKey
             , flags = flags
+            , session = initSession navKey
             }
     in
     ( initialModel, Cmd.none )

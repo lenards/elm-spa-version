@@ -1,4 +1,4 @@
-module Types exposing (Flags, Model, Msg(..))
+module Types exposing (Flags, Model, Msg(..), initSession)
 
 import Browser
 import Browser.Navigation as Nav
@@ -15,8 +15,26 @@ type Msg
     | ClickedLink Browser.UrlRequest
 
 
+type Token
+    = Token String
+
+
+type Username
+    = Username String
+
+
+type Session
+    = Unauthenticated Nav.Key
+    | Session Nav.Key Username Token
+
+
 type alias Model =
     { base : Url
-    , nav : Nav.Key
     , flags : Flags
+    , session : Session
     }
+
+
+initSession : Nav.Key -> Session
+initSession navKey =
+    Unauthenticated navKey
