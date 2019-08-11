@@ -13,8 +13,8 @@ authorDecoder =
     Decode.succeed AuthorDto
         |> required "username" Decode.string
         |> required "email" Decode.string
-        |> required "bio" Decode.string
-        |> required "image" Decode.string
+        |> optional "bio" Decode.string ""
+        |> optional "image" Decode.string ""
 
 
 commentDecoder : Decoder CommentDto
@@ -40,7 +40,6 @@ articleDecoder =
         |> required "description" Decode.string
         |> required "body" Decode.string
         |> required "author" authorDecoder
-        |> required "comments" commentsDecoder
         |> required "favorited" Decode.bool
         |> required "favoritesCount" Decode.int
         |> required "tagList" (Decode.list Decode.string)

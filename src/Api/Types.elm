@@ -36,7 +36,6 @@ type alias ArticleDto =
     , description : String
     , body : String
     , author : AuthorDto
-    , comments : CommentsDto
     , favorited : Bool
     , favoritesCount : Int
     , tagList : List String
